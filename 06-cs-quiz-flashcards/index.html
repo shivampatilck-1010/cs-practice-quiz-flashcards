@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Practice & Review | shivam.dev</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Clean Minimalist Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <a href="#" class="brand-logo">
+          <span class="logo-mark">&lt;/&gt;</span>
+          <span class="brand-text">CS<strong>Practice</strong></span>
+        </a>
+        <nav class="category-nav">
+          <button class="nav-tab active" onclick="setCategory('All')">All Topics</button>
+          <button class="nav-tab" onclick="setCategory('DSA')">DSA</button>
+          <button class="nav-tab" onclick="setCategory('C++')">C++</button>
+          <button class="nav-tab" onclick="setCategory('Python')">Python</button>
+          <button class="nav-tab" onclick="setCategory('DBMS')">DBMS</button>
+          <button class="nav-tab" onclick="setCategory('OS')">OS & Networks</button>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <div class="mode-switch">
+          <button class="switch-btn active" id="btn-quiz" onclick="switchMode('quiz')">Quiz</button>
+          <button class="switch-btn" id="btn-flash" onclick="switchMode('flashcard')">Flashcards</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="workspace">
+      <!-- Top Meta Bar for Quiz Mode -->
+      <div class="meta-bar" id="meta-bar">
+        <div class="meta-left">
+          <span class="meta-label" id="category-badge">DSA</span>
+          <span class="meta-counter" id="question-counter">Question 1 of 30</span>
+        </div>
+        <div class="meta-center">
+          <div class="timer-pill" id="timer-pill">
+            <span class="timer-dot"></span>
+            <span id="timer-val">15s</span>
+          </div>
+        </div>
+        <div class="meta-right">
+          <span class="score-display" id="score-display">Score: <strong>0</strong></span>
+        </div>
+      </div>
+
+      <!-- Linear Progress Line -->
+      <div class="progress-track" id="progress-track">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+
+      <!-- Interactive Question / Flashcard Container -->
+      <div class="card-workspace" id="card-workspace">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </main>
+
+    <!-- Clean Footer -->
+        <footer class="app-footer">
+      <p>Tip: Use keyboard keys <kbd>A</kbd>, <kbd>B</kbd>, <kbd>C</kbd>, <kbd>D</kbd> or <kbd>1</kbd>-<kbd>4</kbd> to select answers, and <kbd>Enter</kbd> for next.</p>
+      <p style="margin-top: 0.35rem; color: var(--text-secondary);">© 2026 Shivam Patil (shivam.dev). All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
